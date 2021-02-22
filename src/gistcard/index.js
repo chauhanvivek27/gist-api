@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 import Badge from '../badge';
+import ForkDetails from '../fork';
 
 export default class GistCard extends PureComponent {
     render() {
@@ -20,6 +21,7 @@ export default class GistCard extends PureComponent {
                     <p className="lead">{(gistData.description) || 'No Description'}</p>
                     <p className="text-secondary">{noOfFiles} {(noOfFiles > 1) ? 'Files' : 'File'}</p>
                     <Badge files={arr}/>
+                    <ForkDetails gistId={gistData.id}/>
                 </div>
         );
     }

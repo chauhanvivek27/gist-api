@@ -5,7 +5,7 @@ export default {
     getAllGistUrl: (username) => {
         return `${BASE_URL}/users/${username}/gists`;
     },
-    getSingleGistUrl: (gistId) => {
+    getForkGistUrl: (gistId) => {
         return `${BASE_URL}/gists/${gistId}`
     }
 }

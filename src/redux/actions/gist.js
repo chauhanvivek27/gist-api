@@ -22,6 +22,15 @@ const onFailure = (err) => {
         isLoading: false
     }
 }
+
+const onSuccessFork = (dataObj) => {
+    //I can pass normalized data here
+    return {
+        type: 'SINGLE_GIST_SUCCESS',
+        payload: dataObj,
+        isLoading: false
+    }
+}
 const fetchAllGists = (username) => {
     return function(dispatch) {
         dispatch(beforeCall());
@@ -38,4 +47,21 @@ const fetchAllGists = (username) => {
     }
 }
 
-export {fetchAllGists};
+const fetchForkGists = (username) => {
+    return function(dispatch) {
+        dispatch(beforeCall());
+        return axios
+        .get(config.getForkGistUrl(username)).then((response) => {
+            if(response.data) {
+                dispatch(onSuccessFork(response.data, username));
+            } else {
+                dispatch(onFailure(`0 Gists Found for ${username}`));
+            }
+        }).catch((err) => {
+            dispatch(onFailure(`Some problem while making call`)); //${err} - you can pass - optional
+        });
+    }
+}
+
+export { fetchAllGists, fetchForkGists }
+
