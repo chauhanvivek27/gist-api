@@ -35,12 +35,12 @@ class Search extends Component {
             value={username}
             className="txtuser"
             onChange={this.handleChange()}
-            placeholder="Gist User name"
+            placeholder="Enter Username"
           />
           <input
             type="submit"
             value="Search"
-            className="btnsumbit"
+            className="btnsubmit"
             onClick={this.onSubmit}
           />
         </div>

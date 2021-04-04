@@ -20,27 +20,33 @@ code {
   margin: 0 10px 0 10px;
 }
 .txtuser {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
     border: 1px solid #999; 
     outline:0; 
-    height:25px; 
+    height:30px; 
     width: 275px;
     box-shadow: 0 2px 4px #BBB inset;
     -moz-box-shadow: 0 2px 4px #bbb inset;
-    -webkit-box-shadow: 0 2px 4px #BBB inset; 
+    -webkit-box-shadow: 0 2px 4px #BBB inset;
+    margin-top: 4px;
+    margin-right: 8px;
 }
-.btnsumbit {
-  color: white;
-  text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
+.btnsubmit {
+  width: 140px;
+  height: 38px;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  text-align: center;
-  padding: 0 30px;
-  line-height: 30px;
-  display: inline-block;
-  position: relative;
-  border-radius: 20px;
-  background-image: linear-gradient(#BBB 45%, #BBB 55%);
-  box-shadow: 0 2px 2px #888888;
-  transition: color 0.3s, background-image 0.5s, ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1.0px;
+  font-weight: 500;
+  color: rgb(3, 3, 3);
+  background-color: rgb(226, 200, 200);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
