@@ -1,4 +1,4 @@
-const  BASE_URL = 'https://cors-anywhere.herokuapp.com/https://api.github.com'; //Added the heroku cors to remove cross origin error
+const  BASE_URL = 'https://api.github.com'; //Added the heroku cors to remove cross origin error
 
 
 export default {

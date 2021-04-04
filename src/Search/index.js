@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import SearchResults from '../searchResult';
 import { connect } from 'react-redux';
-import { fetchAllGists } from '../redux/actions/gist';
+import { fetchAllGists } from '../redux/actions/gistAction';
 
 class Search extends Component {
   state = {
@@ -21,6 +21,7 @@ class Search extends Component {
   };
 
   render() {
+    //gaearon
     const {
       username
     } = this.state;
@@ -28,9 +29,6 @@ class Search extends Component {
       <Fragment>
         <h2>Gist API Search </h2>
         <div className="search">
-          <label for="txtCity" className="topLabel">
-            Gist Username
-              </label>
           <input
             id="txtusername"
             type="text"

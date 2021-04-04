@@ -1,0 +1,2 @@
+export const ALL_GIST_SUCCESS = 'ALL_GISTS_SUCCESS';
+export const GIST_ERROR = 'GIST_ERROR';
